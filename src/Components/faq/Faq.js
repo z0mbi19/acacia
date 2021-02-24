@@ -32,7 +32,7 @@ function Faq() {
 
   return (
     <StyledFaq>
-      <h1>{radio === "en" ? textfaq.en.title : textfaq.br.title}</h1>
+      <h1 id="faq">{radio === "en" ? textfaq.en.title : textfaq.br.title}</h1>
       <div className="faq-div">
         <div>
           <img src={FaqFig} alt="FAQ" />
