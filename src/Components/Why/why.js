@@ -80,7 +80,7 @@ function Why() {
   return (
     <div>
       <WhyStyled>
-        <h1>{radio === "en" ? textWhy.en.title : textWhy.br.title}</h1>
+        <h1 id="why" >{radio === "en" ? textWhy.en.title : textWhy.br.title}</h1>
         <p>{radio === "en" ? textWhy.en.p : textWhy.br.p}</p>
         <div className="why-cards">
           <div className="why-card">
