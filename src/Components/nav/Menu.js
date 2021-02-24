@@ -89,12 +89,12 @@ function Menu() {
         </a>
       </li>
       <li>
-        <a href={`#FAQ`}>
+        <a href={`#faq`}>
           {radioValue === "en" ? textMenu.en.FAQ : textMenu.br.FAQ}
         </a>
       </li>
       <li>
-        <a href={`#FAQ`}>
+        <a >
           <MenuBtn>
             {radioValue === "en" ? textMenu.en.sing : textMenu.br.sing}
           </MenuBtn>
