@@ -94,7 +94,8 @@ export const textBlogs = {
 export const textSing = {
   en: {
     title: "Sign the nature pledge",
-    subTitle: "Eles estão se comprometendo com:",
+
+    subTitle: "The are committing to:",
     text1:
       "learn to raise your environmental awareness [we will send free educational material]",
     text2:
@@ -104,7 +105,7 @@ export const textSing = {
   },
   br: {
     title: "Assine nature pledge",
-    subTitle: "The are committing to:",
+    subTitle: "Eles estão se comprometendo com:",
     text1:
       "aprenda a aumentar sua consciência ambiental [enviaremos material educacional gratuito]",
     text2:
