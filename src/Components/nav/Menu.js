@@ -8,23 +8,26 @@ import { textMenu } from "../../Lang/lang";
 const UL = styled.ul`
   display: flex;
   list-style: none;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
+  align-content: center;
+  text-align: center;
+  margin-top: 20px;
+  li:last-child {
+    margin-top: 2px !important;
+  }
 
   li {
-    margin-left: 30px;
-
+    margin-top: 30px;
     a {
-      padding: 10px;
+      padding: 0 10px;
       text-decoration: none;
       font-family: sans-serif;
-      font-style: normal;
-      font-weight: normal;
       font-size: 20px;
       color: #353845;
       border-radius: 5px;
     }
   }
-  @media (max-width: 1267px) {
+  @media (max-width: 1200px) {
     display: flex;
     flex-flow: column nowrap;
     background-color: #abd840;
@@ -53,7 +56,7 @@ const MenuBtn = styled.button`
   border-radius: 5px;
   background-color: #29441e;
   color: white;
-  padding: 19px 42px;
+  padding: 10px 20px;
   margin: -20px 50px 0px 0px;
 `;
 
@@ -94,16 +97,13 @@ function Menu() {
         </a>
       </li>
       <li>
-        <a >
+        <a>
           <MenuBtn>
             {radioValue === "en" ? textMenu.en.sing : textMenu.br.sing}
           </MenuBtn>
         </a>
       </li>
       <li>
-        <label>
-          {radioValue === "en" ? textMenu.en.btnLabel : textMenu.br.btnLabel}
-        </label>
         <br />
         <ButtonGroup toggle>
           {radios.map((radio, idx) => (

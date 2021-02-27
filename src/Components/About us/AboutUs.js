@@ -7,14 +7,14 @@ import { textAbout } from "../../Lang/lang";
 import { LangContext } from "../../Context/Context";
 
 const AboutUs = styled.div`
-  display: flex;
+  justify-content: center;
   display: flex;
   height: 100%;
   flex-flow: row;
   .textWorld {
     max-height: 500px;
     max-width: 700px;
-    margin: 5% 2%;
+    padding: 50px;
   }
   @media (max-width: 763px) {
     flex-flow: column;
@@ -22,7 +22,9 @@ const AboutUs = styled.div`
   div {
     display: flex;
     flex-wrap: wrap;
-    padding: 8% 3%;
+    h3 {
+      margin-bottom: 0 !important;
+    }
 
     p {
       font-style: normal;
@@ -43,6 +45,7 @@ function About() {
         backgroundPosition: "bottom",
         backgroundRepeat: "none",
         padding: "10px",
+        zIndex: "0",
       }}
     >
       <AboutUs>

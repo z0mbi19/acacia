@@ -14,7 +14,7 @@ const StyledByrger = styled.div`
   flex-flow: column nowrap;
   z-index: 20;
 
-  @media (max-width: 1267px) {
+  @media (max-width: 1200px) {
     display: flex;
   }
 

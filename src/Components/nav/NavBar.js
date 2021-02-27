@@ -1,31 +1,24 @@
 import React from "react";
 import styled from "styled-components";
-import logo from "../../Assets/logo.svg";
-import bg1 from "../../Assets/fig-top.svg";
+import logo from "../../Assets/logo-acacia-horiz.svg";
+import Bg from "../bgfig/BgFigRight";
 
 import Ul from "./Menu";
 
 const Nav = styled.nav`
-  background-image: url(${bg1});
-  background-position: top right;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 20%;
   padding: 10px 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  .logo {
-    padding-top: 30px;
-  }
+  text-align: center;
 `;
 
 function NavBar() {
   return (
     <Nav>
-      <img className="logo" src={logo} alt="acacia logo" />
+      <img className="logo" src={logo} alt="acacia logo" width="20%" />
       <Ul />
+      <Bg />
     </Nav>
   );
 }
