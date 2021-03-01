@@ -24,6 +24,14 @@ const BlogsStyles = styled.div`
       flex-wrap: wrap;
     }
   }
+  .postblog {
+    width: 60%;
+    @media (max-width: 850px) {
+      width: 90%;
+      text-align: center;
+      margin-left: 3%;
+    }
+  }
   .datapost {
     display: flex;
     justify-content: space-around;
@@ -34,6 +42,10 @@ const BlogsStyles = styled.div`
     margin: 3%;
     @media (max-width: 850px) {
       flex-wrap: wrap;
+      justify-content: center;
+      img {
+        width: 100%;
+      }
     }
   }
   .textcard {
@@ -65,7 +77,7 @@ function Blogs() {
       <h1>{radio === "en" ? textBlogs.en.title : textBlogs.br.title}</h1>
 
       <div className="cardblog">
-        <div className="postcard">
+        <div className="postblog">
           <img src={blogImg} alt="blogImg" width="100%" />
           <div className="datapost">
             <p>2 july</p>
@@ -94,7 +106,7 @@ function Blogs() {
             </a>
           </div>
         </div>
-        <div className="postcard">
+        <div>
           <div className="miniblog">
             <div>
               <img src={blogImg2} alt="blogImg" width="170px" />
@@ -117,7 +129,7 @@ function Blogs() {
                   {loading ? (
                     data
                       .find((x) => x.id === data.length - 1)
-                      .textBlog.substring(0, 200) + "..."
+                      .textBlog.substring(0, 100) + "..."
                   ) : (
                     <Spinner animation="border" />
                   )}
@@ -147,7 +159,7 @@ function Blogs() {
                   {loading ? (
                     data
                       .find((x) => x.id === data.length - 2)
-                      .textBlog.substring(0, 200) + "..."
+                      .textBlog.substring(0, 100) + "..."
                   ) : (
                     <Spinner animation="border" />
                   )}
@@ -177,7 +189,7 @@ function Blogs() {
                   {loading ? (
                     data
                       .find((x) => x.id === data.length - 3)
-                      .textBlog.substring(0, 200) + "..."
+                      .textBlog.substring(0, 100) + "..."
                   ) : (
                     <Spinner animation="border" />
                   )}

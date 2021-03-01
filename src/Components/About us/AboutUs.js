@@ -29,7 +29,6 @@ const AboutUs = styled.div`
     p {
       font-style: normal;
       font-size: 26px;
-      font-weight: 500;
       line-height: 30px;
       color: #120f47;
     }

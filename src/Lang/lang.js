@@ -1,7 +1,7 @@
 export const textMenu = {
   en: {
     about: "About us",
-    how: "How if works",
+    how: "How it works",
     why: "Why is important?",
     blogs: "Blogs",
     FAQ: "FAQ",
@@ -38,7 +38,7 @@ export const textAbout = {
 
 export const textHow = {
   en: {
-    title: "How it works?",
+    title: "How it works",
     card1:
       "We have a pool of ambient services providers and a pool of donors/sponsors",
     card2:
@@ -83,11 +83,11 @@ export const textWhy = {
 export const textBlogs = {
   en: {
     title: "Our Blogs",
-    read: "Read me ->",
+    read: "See more articles ->",
   },
   br: {
     title: "Nossos Blogs",
-    read: "Mais ->",
+    read: "Veja mais artigos ->",
   },
 };
 

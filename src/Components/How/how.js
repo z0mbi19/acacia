@@ -42,7 +42,6 @@ const CardsHow = styled.div`
     margin: 20px;
     text-align: center;
     border-radius: 5px;
-    height: 100%;
     width: 450px;
     h3 {
       padding: 30px;
@@ -56,7 +55,6 @@ const CardsHow = styled.div`
     margin: 20px;
     text-align: center;
     border-radius: 5px;
-    height: 100%;
     width: 450px;
     h3 {
       padding: 30px;
@@ -72,6 +70,7 @@ const CardsHow = styled.div`
     padding: 23px 45px;
     background: #29441e;
     color: white;
+    white-space: nowrap;
     margin-top: 2%;
     margin-left: 40%;
     margin-right: 40%;
