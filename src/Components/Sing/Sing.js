@@ -49,7 +49,7 @@ const SteledSing = styled.div`
     flex-wrap: wrap;
     @media (max-width: 400px) {
       img {
-        width: 100%;
+        width: 80%;
       }
     }
   }

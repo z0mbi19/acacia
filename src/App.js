@@ -7,7 +7,7 @@ import { LangProvider, BurgerProvider } from "./Context/Context";
 import About from "./Components/About us/AboutUs";
 import How from "./Components/How/how";
 import Why from "./Components/Why/why";
-import Blogs from "./Components/Blogs/Blogs";
+import Blogs from "./Components/Blogs/Carousel";
 import Sing from "./Components/Sing/Sing";
 import Faq from "./Components/faq/Faq";
 import Footer from "./Components/footer/Footer";

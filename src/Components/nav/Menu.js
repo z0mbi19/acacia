@@ -11,7 +11,6 @@ const UL = styled.ul`
   flex-flow: row wrap;
   align-content: center;
   text-align: center;
-  margin-top: 20px;
   li:last-child {
     margin-top: 2px !important;
   }
@@ -38,7 +37,6 @@ const UL = styled.ul`
     right: 0;
     height: 100vh;
     width: 300px;
-    padding-top: 3.5rem;
     transition: transform 0.3s ease-in-out;
     z-index: 1;
 
@@ -66,7 +64,7 @@ function Menu() {
 
   const radios = [
     { name: "EN", value: "en" },
-    { name: "BR", value: "br" },
+    { name: "PT", value: "br" },
   ];
 
   return (
@@ -97,11 +95,9 @@ function Menu() {
         </a>
       </li>
       <li>
-        <a>
-          <MenuBtn>
-            {radioValue === "en" ? textMenu.en.sing : textMenu.br.sing}
-          </MenuBtn>
-        </a>
+        <MenuBtn>
+          {radioValue === "en" ? textMenu.en.sing : textMenu.br.sing}
+        </MenuBtn>
       </li>
       <li>
         <br />
