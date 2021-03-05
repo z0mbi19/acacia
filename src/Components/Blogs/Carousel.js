@@ -7,11 +7,13 @@ import ImgBlog from "../../Assets/blogs-img1.svg";
 const CarStyled = styled.div`
   width: 80%;
   margin-left: 10%;
+  text-align: center;
 `;
 
 function CarouselBlogs() {
   return (
     <CarStyled>
+      <h1 id="blogs">Blogs</h1>
       <a href="/article/1">
         <Carousel>
           <Carousel.Item>
