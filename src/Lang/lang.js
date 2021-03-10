@@ -48,9 +48,9 @@ export const textHow = {
   br: {
     title: "Como funciona?",
     card1:
-      "Temos muitos de provedores de serviços ambientais e de doadores / patrocinadores",
+      "Conectamos provedores de serviços ambientais com apoiadores do meio ambiente",
     card2:
-      "Medimos o impacto dos provedores de serviços ambientais, aprendemos com eles e os ajudamos a aprimorar seus resultados, ao mesmo tempo em que aumentamos a responsabilidade",
+      "Medimos o impacto dos provedores de serviços ambientais, aprendemos com eles e os ajudamos a aprimorar seus resultados",
     button: "Seja um patrocinador da natureza",
   },
 };
@@ -71,7 +71,7 @@ export const textWhy = {
     title: "Porque é importante?",
     p:
       "Estar consciente do meio ambiente é particularmente importante, dados os crescentes desafios ambientais que enfrentamos, tais como:",
-    card1: "Alterações Climáticas",
+    card1: "Mudanças Climáticas",
     card2: "Escassez de água",
     card3: "Desmatamento",
     card4: "Inundações",
@@ -104,12 +104,12 @@ export const textSing = {
     btn: "Sing the nature pledge",
   },
   br: {
-    title: "Assine nature pledge",
-    subTitle: "Eles estão se comprometendo com:",
+    title: "Assine o nature pledge",
+    subTitle: "Eles estão se comprometendo em:",
     text1:
-      "aprenda a aumentar sua consciência ambiental [enviaremos material educacional gratuito]",
+      "aprender para ampliar sua consciência ambiental [nós enviaremos material educacional gratuito];",
     text2:
-      "aplique seu conhecimento reduzindo o desperdício, reutilizando recursos e reciclando materiais;",
+      "aplicar seu conhecimento reduzindo o desperdício, reutilizando recursos e reciclando materiais;",
     text3:
       "compartilhar seus conhecimentos ambientais com seus amigos e familiares.",
     btn: "Assine nature pledge",

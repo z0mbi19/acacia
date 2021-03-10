@@ -149,7 +149,7 @@ function Articles() {
           profits from discoveries linked to these nation’s natural resources,
           such as new drugs, would be shared.
         </p>
-        <button className="btnBecome">Become a sponsor of the nature</button>
+        <button className="btnBecome">Sign newsletter</button>
       </Article>
       <Footer />
     </div>
