@@ -75,6 +75,7 @@ const CardsHow = styled.div`
     margin-left: 40%;
     margin-right: 40%;
     margin-bottom: 2%;
+    display: none;
   }
 `;
 
