@@ -7,7 +7,7 @@ import FacebookIcon from "@material-ui/icons/Facebook";
 import BookmarkIcon from "@material-ui/icons/Bookmark";
 import { Button } from "react-bootstrap";
 
-import Nav from "../Components/nav/NavBar";
+import Nav from "../Components/navAticles/NavBar";
 import Burger from "../Components/nav/Burger";
 import Footer from "../Components/footer/Footer";
 import ArticImg from "../Assets/blogs-img1.svg";
@@ -16,7 +16,7 @@ const Article = styled.div`
   justify-items: center;
   text-align: center;
   p {
-    margin: 1% 10%;
+    margin: 1% 20%;
     text-align: justify;
   }
   .btnBecome {

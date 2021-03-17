@@ -1,14 +1,16 @@
 import React, { useContext } from "react";
 import styled from "styled-components";
+import FaqFig from "../../Assets/faq-fig.svg";
+import { TextField, Button } from "@material-ui/core";
+import * as yup from "yup";
 
 import { textfaq } from "../../Lang/lang";
 import { LangContext } from "../../Context/Context";
 
-import FaqFig from "../../Assets/faq-fig.svg";
-
 const StyledFaq = styled.div`
   text-align: center;
   padding-top: 5%;
+  display: none;
   .faq-card {
     display: flex;
     flex-flow: column;
@@ -16,6 +18,20 @@ const StyledFaq = styled.div`
     border-radius: 5px;
     padding: 80px 2% 10px;
     width: 100%;
+    .form {
+      display: flex;
+      border-radius: 5px;
+      flex-flow: column;
+      padding: 25px 10px;
+      .btnForm {
+        margin: 40px;
+      }
+      div {
+        width: 100%;
+        margin: 10 50px;
+        height: 60px;
+      }
+    }
   }
   .faq-div {
     display: flex;
@@ -38,91 +54,20 @@ function Faq() {
           <img src={FaqFig} alt="FAQ" />
         </div>
         <div className="faq-card">
-          <div class="accordion accordion-flush" id="accordionFlushExample">
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="flush-headingOne">
-                <button
-                  class="accordion-button collapsed"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#flush-collapseOne"
-                  aria-expanded="false"
-                  aria-controls="flush-collapseOne"
-                >
-                  This is a Questions?
-                </button>
-              </h2>
-              <div
-                id="flush-collapseOne"
-                class="accordion-collapse collapse"
-                aria-labelledby="flush-headingOne"
-                data-bs-parent="#accordionFlushExample"
-              >
-                <div class="accordion-body">
-                  Placeholder content for this accordion, which is intended to
-                  demonstrate the <code>.accordion-flush</code> class. This is
-                  the first item's accordion body.
-                </div>
-              </div>
+          <form className="form" noValidate autoComplete="off">
+            <div>
+              <TextField id="standard-basic" label="Your Name" />
             </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="flush-headingTwo">
-                <button
-                  class="accordion-button collapsed"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#flush-collapseTwo"
-                  aria-expanded="false"
-                  aria-controls="flush-collapseTwo"
-                >
-                  This is Another Questions?
-                </button>
-              </h2>
-              <div
-                id="flush-collapseTwo"
-                class="accordion-collapse collapse"
-                aria-labelledby="flush-headingTwo"
-                data-bs-parent="#accordionFlushExample"
-              >
-                <div class="accordion-body">
-                  Placeholder content for this accordion, which is intended to
-                  demonstrate the <code>.accordion-flush</code> class. This is
-                  the second item's accordion body. Let's imagine this being
-                  filled with some actual content.
-                </div>
-              </div>
+            <div>
+              <TextField id="standard-basic" label="Your E-mail" />
             </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="flush-headingThree">
-                <button
-                  class="accordion-button collapsed"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#flush-collapseThree"
-                  aria-expanded="false"
-                  aria-controls="flush-collapseThree"
-                >
-                  More Questions?
-                </button>
-              </h2>
-              <div
-                id="flush-collapseThree"
-                class="accordion-collapse collapse"
-                aria-labelledby="flush-headingThree"
-                data-bs-parent="#accordionFlushExample"
-              >
-                <div class="accordion-body">
-                  Placeholder content for this accordion, which is intended to
-                  demonstrate the <code>.accordion-flush</code> class. This is
-                  the third item's accordion body. Nothing more exciting
-                  happening here in terms of content, but just filling up the
-                  space to make it look, at least at first glance, a bit more
-                  representative of how this would look in a real-world
-                  application.
-                </div>
-              </div>
+            <div>
+              <TextField id="standard-basic" label="Your Question" />
             </div>
-          </div>
+            <Button className="btnForm" color="primary">
+              Send
+            </Button>
+          </form>
         </div>
       </div>
     </StyledFaq>
