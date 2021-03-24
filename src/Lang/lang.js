@@ -118,7 +118,7 @@ export const textSing = {
 
 export const textfaq = {
   en: {
-    title: "Frequently Asked Questions",
+    title: "Do Have Any Question?",
   },
   br: {
     title: "Perguntas frequentes ",

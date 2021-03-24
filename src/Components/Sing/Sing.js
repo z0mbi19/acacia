@@ -65,7 +65,7 @@ function Sing() {
         <h1>{radio === "en" ? textSing.en.title : textSing.br.title}</h1>
         <div>
           <div>
-            <img src={SingFig} alt="Sing Fig" />
+            <img src={SingFig} alt="Sing Fig" width="80%" />
           </div>
           <div className="textSing">
             <h2>
