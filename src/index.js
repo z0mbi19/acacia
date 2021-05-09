@@ -14,7 +14,7 @@ ReactDOM.render(
         <LangProvider>
           <BurgerProvider>
             <Route path="/" exact={true} component={App} />
-            <Route path="/article/1" component={Articles} />
+            <Route path="/article/:id" component={Articles} />
           </BurgerProvider>
         </LangProvider>
       </Switch>
