@@ -1,9 +1,31 @@
 import React, { useContext } from "react";
 import styled from "styled-components";
 import { ToggleButton, ButtonGroup } from "react-bootstrap";
+import { makeStyles } from "@material-ui/core/styles";
+import Modal from "@material-ui/core/Modal";
+import { useFormik } from "formik";
+import { TextField } from "@material-ui/core";
+import axios from "axios";
+import * as Yup from "yup";
 
 import { LangContext, BurgerContext } from "../../Context/Context";
 import { textMenu } from "../../Lang/lang";
+import { Link } from "react-router-dom";
+
+const useStyles = makeStyles((theme) => ({
+  paper: {
+    position: "absolute",
+    width: 400,
+    backgroundColor: theme.palette.background.paper,
+    borderRadius: `5px`,
+    boxShadow: theme.shadows[5],
+    padding: theme.spacing(2, 4, 3),
+    top: `50%`,
+    left: `50%`,
+    transform: `translate(-50%, -50%)`,
+  },
+}));
+
 
 const UL = styled.ul`
   display: flex;
@@ -62,20 +84,85 @@ function Menu() {
   const [radioValue, setRadioValue] = useContext(LangContext);
   const [open] = useContext(BurgerContext);
 
+  const classes = useStyles();
+
+  const [openModal, setOpenModal] = React.useState(false);
+
+  const handleOpen = () => {
+    setOpenModal(true);
+  };
+
+  const handleClose = () => {
+    setOpenModal(false);
+  };
+
+  const formik = useFormik({
+    initialValues: {
+      email: "",
+    },
+    validationSchema: Yup.object({
+      email: Yup.string().email("Invalid email format").required("Required!"),
+    }),
+    onSubmit: (values, { resetForm }) => {
+      console.log({
+        email: values.email,
+      });
+      axios
+        .post("http://34.233.136.200:5000/lead", {
+          email: values.email,
+        })
+        .then((response) => {
+          console.log(response);
+        })
+        .catch((err) => console.log(err));
+      resetForm({});
+      handleClose();
+    },
+  });
+
+  const body = (
+    <div className={classes.paper}>
+      <h2 id="simple-modal-title">Sign</h2>
+
+      <form onSubmit={formik.handleSubmit}>
+        <TextField
+          label="Your E-mail"
+          type="email"
+          name="email"
+          value={formik.values.email}
+          onChange={formik.handleChange}
+        />
+        {formik.errors.email && formik.touched.email && (
+          <p className="err">{formik.errors.email}</p>
+        )}
+        <MenuBtn className="btnForm" type="submit" color="primary">
+          Send
+        </MenuBtn>
+      </form>
+    </div>
+  );
+
   const radios = [
     { name: "EN", value: "en" },
     { name: "PT", value: "br" },
   ];
-
   return (
     <UL className="menu" open={open}>
       <li>
         <a href={`/`}>Home</a>
       </li>
       <li>
-        <MenuBtn>
+        <MenuBtn onClick={handleOpen}>
           {radioValue === "en" ? textMenu.en.sing : textMenu.br.sing}
         </MenuBtn>
+        <Modal
+          open={openModal}
+          onClose={handleClose}
+          aria-labelledby="simple-modal-title"
+          aria-describedby="simple-modal-description"
+        >
+          {body}
+        </Modal>
       </li>
       <li>
         <br />

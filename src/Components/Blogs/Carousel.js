@@ -13,7 +13,11 @@ const CarStyled = styled.div`
   text-align: center;
   .imgCard {
     border-radius: 5px;
-    width: 60%;
+  }
+  .carrossel {
+    width: 50%;
+    border-radius: 10px;
+    margin-left: 25%;
   }
 `;
 
@@ -38,13 +42,13 @@ function CarouselBlogs() {
   return (
     <CarStyled>
       <h1 id="blogs">Blogs</h1>
-      <Carousel>
+      <Carousel className="carrossel">
         <Carousel.Item>
           {data ? (
             <>
               <Link to={`/article/${data[data.length - 1].id}`}>
                 <img
-                  className="d-block w-100"
+                  className="d-block w-100 imgCard"
                   src={data[data.length - 1].img[0].url}
                   alt="First slide"
                 />
@@ -66,7 +70,7 @@ function CarouselBlogs() {
             <>
               <Link to={`/article/${data[data.length - 2].id}`}>
                 <img
-                  className="d-block w-100"
+                  className="d-block w-100 imgCard"
                   src={data[data.length - 2].img[0].url}
                   alt="First slide"
                 />

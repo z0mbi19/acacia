@@ -10,6 +10,7 @@ import * as Yup from "yup";
 
 import { LangContext, BurgerContext } from "../../Context/Context";
 import { textMenu } from "../../Lang/lang";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -163,9 +164,9 @@ function Menu() {
         </a>
       </li>
       <li>
-        <a href={`#blogs`}>
+        <Link to="/blogs">
           {radioValue === "en" ? textMenu.en.blogs : textMenu.br.blogs}
-        </a>
+        </Link>
       </li>
       <li>
         <a href={`#faq`}>

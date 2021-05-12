@@ -6,6 +6,7 @@ import Articles from "./pages/Article";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { LangProvider, BurgerProvider } from "./Context/Context";
+import MenuBlogs from "./pages/MenuBlogs";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -15,6 +16,7 @@ ReactDOM.render(
           <BurgerProvider>
             <Route path="/" exact={true} component={App} />
             <Route path="/article/:id" component={Articles} />
+            <Route path="/blogs" component={MenuBlogs} />
           </BurgerProvider>
         </LangProvider>
       </Switch>
