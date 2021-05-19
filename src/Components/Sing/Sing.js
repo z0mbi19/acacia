@@ -96,7 +96,7 @@ function Sing() {
               </div>
             </div>
             <div>
-              <a href="https://naturepledge.org/">
+              <a href="https://naturepledge.org/" target="_blank">
                 <button>
                   {radio === "en" ? textSing.en.btn : textSing.br.btn}
                 </button>

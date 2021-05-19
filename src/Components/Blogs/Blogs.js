@@ -4,7 +4,7 @@ import { Spinner } from "react-bootstrap";
 //import { parseISO, format } from "date-fns";
 
 import { textBlogs } from "../../Lang/lang";
-import { LangContext } from "../../Context/Context";
+import { LangContext } from "../../Context/Context";  
 import Strapi from "../../api/strapi";
 
 import blogImg from "../../Assets/blogs-img1.svg";
